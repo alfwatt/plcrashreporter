@@ -97,8 +97,10 @@ static int monitored_signals_count = (sizeof(monitored_signals) / sizeof(monitor
  * Signal handler context
  */
 typedef struct signal_handler_ctx {
+#ifndef DEBUFF
     /** PLCrashLogWriter instance */
     plcrash_log_writer_t writer;
+#endif
 
     /** Path to the output file */
     const char *path;
@@ -158,7 +160,7 @@ static plcrash_error_t plcrash_write_report (plcrashreporter_handler_ctx_t *sigc
     
     /* Initialize the output context */
     plcrash_async_file_init(&file, fd, MAX_REPORT_BYTES);
-    
+#ifndef DEBUFF
     /* Write the crash log using the already-initialized writer */
     err = plcrash_log_writer_write(&sigctx->writer, crashed_thread, sigctx->dynamic_loader, &file, siginfo, thread_state);
 
@@ -168,7 +170,9 @@ static plcrash_error_t plcrash_write_report (plcrashreporter_handler_ctx_t *sigc
         plcrash_async_file_close(&file);
         return PLCRASH_EINTERNAL;
     }
-    
+#else
+    err = noErr;
+#endif
     /* Finished */
     if (!plcrash_async_file_flush(&file)) {
         PLCF_DEBUG("Failed to flush output file");
@@ -330,11 +334,12 @@ static kern_return_t mach_exception_callback (task_t task, thread_t thread, exce
  * exception field, and triggering the signal handler.
  */
 static void uncaught_exception_handler (NSException *exception) {
+#ifndef DEBUFF
     /* Set the uncaught exception */
     plcrash_log_writer_set_exception(&signal_handler_context.writer, exception);
-
     /* Synchronously trigger the crash handler */
     abort();
+#endif
 }
 
 
@@ -565,10 +570,11 @@ static PLCrashReporter *sharedReporter = nil;
     }
     
     /* Crash log writer instance */
+#ifndef DEBUFF
     assert(_applicationIdentifier != nil);
     assert(_applicationVersion != nil);
     plcrash_log_writer_init(&signal_handler_context.writer, _applicationIdentifier, _applicationVersion, _applicationMarketingVersion, [self mapToAsyncSymbolicationStrategy: _config.symbolicationStrategy], false);
-    
+#endif
     
 
     /*
@@ -671,15 +677,19 @@ static PLCrashReporter *sharedReporter = nil;
 
 /* State and callback used by -generateLiveReportWithThread */
 struct plcr_live_report_context {
+#ifndef DEBUFF
     plcrash_log_writer_t *writer;
+#endif
     plcrash_async_dynloader_t *loader;
     plcrash_async_file_t *file;
     plcrash_log_signal_info_t *info;
 };
+#ifndef DEBUFF
 static plcrash_error_t plcr_live_report_callback (plcrash_async_thread_state_t *state, void *ctx) {
     struct plcr_live_report_context *plcr_ctx = ctx;
     return plcrash_log_writer_write(plcr_ctx->writer, pl_mach_thread_self(), plcr_ctx->loader, plcr_ctx->file, plcr_ctx->info, state);
 }
+#endif
 
 
 /**
@@ -699,11 +709,14 @@ static plcrash_error_t plcr_live_report_callback (plcrash_async_thread_state_t *
  * @todo Implement in-memory, rather than requiring writing of the report to disk.
  */
 - (NSData *) generateLiveReportWithThread: (thread_t) thread exception: (NSException *) exception error: (NSError **) outError {
+#ifndef DEBUFF
     plcrash_log_writer_t writer;
     plcrash_async_file_t file;
     plcrash_error_t err;
+#endif
     NSData *data = nil;
 
+#ifndef DEBUFF
     /* Open the output file */
     NSString *templateStr = [NSTemporaryDirectory() stringByAppendingPathComponent: @"live_crash_report.XXXXXX"];
     char *path = strdup([templateStr fileSystemRepresentation]);
@@ -795,6 +808,7 @@ cleanup:
     }
 
     free(path);
+#endif
     return data;
 }
 

@@ -76,13 +76,13 @@ struct PLCrashReportFileHeader {
 
 /**
  * @internal
- * Private decoder instance variables (used to hide the underlying protobuf parser).
+ * Private decoder instance variables (used to hide the underlying parser).
  */
 typedef struct _PLCrashReportDecoder _PLCrashReportDecoder;
 
 @interface PLCrashReport : NSObject {
 @private
-    /** Private implementation variables (used to hide the underlying protobuf parser) */
+    /** Private implementation variables (used to hide the underlying parser) */
     _PLCrashReportDecoder *_decoder;
 
     /** System info */

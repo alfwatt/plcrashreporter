@@ -53,6 +53,7 @@
 SYM(plcrash_async_thread_state_current):
 
 #if __x86_64__
+.intel_syntax noprefix
 
 pushq   %rbp
 movq    %rsp, %rbp

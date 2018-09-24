@@ -28,8 +28,9 @@
 
 #import "PLCrashReport.h"
 #import "CrashReporter.h"
-
+#ifndef DEBUFF
 #import "crash_report.pb-c.h"
+#endif
 
 struct _PLCrashReportDecoder {
     Plcrash__CrashReport *crashReport;
@@ -191,7 +192,9 @@ error:
     /* Free the decoder state */
     if (_decoder != NULL) {
         if (_decoder->crashReport != NULL) {
+#ifndef DEBUFF
             protobuf_c_message_free_unpacked((ProtobufCMessage *) _decoder->crashReport, &protobuf_c_system_allocator);
+#else
         }
 
         free(_decoder);

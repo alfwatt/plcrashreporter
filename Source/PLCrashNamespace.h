@@ -295,6 +295,7 @@
 #    define PLCRASHREPORTER_PREFIX PL_
 #  endif
 
+#ifndef DEBUFF
 #  define protobuf_c_buffer_simple_append                   PLNS(protobuf_c_buffer_simple_append)
 #  define protobuf_c_default_allocator                      PLNS(protobuf_c_default_allocator)
 #  define protobuf_c_enum_descriptor_get_value              PLNS(protobuf_c_enum_descriptor_get_value)
@@ -311,4 +312,5 @@
 #  define protobuf_c_service_destroy                        PLNS(protobuf_c_service_destroy)
 #  define protobuf_c_service_generated_init                 PLNS(protobuf_c_service_generated_init)
 #  define protobuf_c_system_allocator                       PLNS(protobuf_c_system_allocator)
+#endif /* DEBUFF */
 #endif /* PLCR_PRIVATE */

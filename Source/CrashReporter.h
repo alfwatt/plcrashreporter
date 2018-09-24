@@ -134,6 +134,11 @@ typedef enum {
  * using the provided PLCrashReport API. Additionally, the include plcrashutil handles conversion of binary crash reports to the 
  * symbolicate-compatible iPhone text format.
  *
+ * @section intro_debuff #DEBUF Crash Report in Text
+ *
+ * If the `-DDEBUF=1` is added to `Other C Flags` then crashes will be writen to `~/Library/Logs/CrashReporter/`
+ * of the applications sandobx, in the symbolicate-compatable iPhone text format.
+ *
  * @section doc_sections Documentation Sections
  * - @subpage example_usage_iphone
  * - @subpage error_handling

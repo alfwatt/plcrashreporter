@@ -315,8 +315,8 @@ retry:
         return PLCRASH_ESUCCESS;
     }
 
-    /* If we got here, we couldn't find a free block, and we couldn't grow our pool. */
-    _lock.unlock();
+    /* If we got here, we couldn't find a free block, and we couldn't grow our pool.
+    _lock.unlock(); */
     return PLCRASH_ENOMEM;
 }
 

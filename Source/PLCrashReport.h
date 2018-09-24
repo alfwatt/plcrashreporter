@@ -116,7 +116,9 @@ typedef struct _PLCrashReportDecoder _PLCrashReportDecoder;
     CFUUIDRef _uuid;
 }
 
+#ifndef DEBUFF
 - (id) initWithData: (NSData *) encodedData error: (NSError **) outError;
+#endif
 
 - (PLCrashReportBinaryImageInfo *) imageForAddress: (uint64_t) address;
 

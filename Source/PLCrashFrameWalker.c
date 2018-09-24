@@ -120,8 +120,8 @@ plframe_error_t plframe_cursor_init (plframe_cursor_t *cursor, task_t task, plcr
 plframe_error_t plframe_cursor_thread_init (plframe_cursor_t *cursor, task_t task, thread_t thread, plcrash_async_image_list_t *image_list) {
     /* Standard initialization */
     plframe_cursor_internal_init(cursor, task, image_list);
-    
-    return plcrash_async_thread_state_mach_thread_init(&cursor->frame.thread_state, thread);
+
+    return (plframe_error_t) plcrash_async_thread_state_mach_thread_init(&cursor->frame.thread_state, thread);
 }
 
 /**

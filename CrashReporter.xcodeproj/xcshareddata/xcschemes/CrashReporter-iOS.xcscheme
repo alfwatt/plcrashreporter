@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05CD31620EE93905000FDE88"
-               BuildableName = "libCrashReporter-iphonesimulator.a"
-               BlueprintName = "CrashReporter-iOS-Simulator"
+               BlueprintIdentifier = "058812B81040582D009128FB"
+               BuildableName = "CrashReporter.framework"
+               BlueprintName = "CrashReporter-iOS"
                ReferencedContainer = "container:CrashReporter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphonesimulator.a"
-            BlueprintName = "CrashReporter-iOS-Simulator"
-            ReferencedContainer = "container:CrashReporter.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -54,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphonesimulator.a"
-            BlueprintName = "CrashReporter-iOS-Simulator"
+            BlueprintIdentifier = "058812B81040582D009128FB"
+            BuildableName = "CrashReporter.framework"
+            BlueprintName = "CrashReporter-iOS"
             ReferencedContainer = "container:CrashReporter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphonesimulator.a"
-            BlueprintName = "CrashReporter-iOS-Simulator"
+            BlueprintIdentifier = "058812B81040582D009128FB"
+            BuildableName = "CrashReporter.framework"
+            BlueprintName = "CrashReporter-iOS"
             ReferencedContainer = "container:CrashReporter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

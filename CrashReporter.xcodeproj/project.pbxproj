@@ -4490,7 +4490,6 @@
 				VALID_ARCHS = "ppc armv6 armv7 armv7s arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wall",
-					"-Werror",
 					"-Wno-shorten-64-to-32",
 					"-Wimport-preprocessor-directive-pedantic",
 					"-Wimplicit-fallthrough",
@@ -4560,7 +4559,6 @@
 				VALID_ARCHS = "ppc armv6 armv7 armv7s arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wall",
-					"-Werror",
 					"-Wno-shorten-64-to-32",
 					"-Wimport-preprocessor-directive-pedantic",
 					"-Wimplicit-fallthrough",

@@ -17,8 +17,8 @@
  limitations under the License.
  */
 
-#ifdef __i386__
 .intel_syntax noprefix
+#ifdef __i386__
 
 #
 # This is a generic function to test that restoring registers during unwinding work correctly.

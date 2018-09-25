@@ -61,28 +61,28 @@ subq    $720, %rsp // Size of 712 + 8 bytes for required alignment
 #define MOVQ(reg, offset) movq %##reg, offset(%rsp)
 
 // These assumed offsets are compile-time validated in PLCrashLogWriter_trampoline.m, and are ABI-stable.
-MOVQ    (rax,   16)
-MOVQ    (rbx,   24);
-MOVQ    (rcx,   32);
-MOVQ    (rdx,   40);
-MOVQ    (rdi,   48);
-MOVQ    (rsi,   56);
+movq    %rax,   16(%rsp)
+movq    %rbx,   24(%rsp)
+movq    %rcx,   32(%rsp)
+movq    %rdx,   40(%rsp)
+movq    %rdi,   48(%rsp)
+movq    %rsi,   56(%rsp)
 
 /* ->rbp: Use our saved copy of the caller's frame pointer */
 movq    (%rbp), %rcx
 movq    %rcx, 64(%rsp)
 
 /* ->rsp: Use our saved copy of the caller's stack pointer. */
-MOVQ    (rbp,   72);
+MOVQ    (rbp,   72)
 
-MOVQ    (r8,    80);
-MOVQ    (r9,    88);
-MOVQ    (r10,   96);
-MOVQ    (r11,   104);
-MOVQ    (r12,   112);
-MOVQ    (r13,   120);
-MOVQ    (r14,   128);
-MOVQ    (r15,   136);
+MOVQ    (r8,    80)
+MOVQ    (r9,    88)
+MOVQ    (r10,   96)
+MOVQ    (r11,   104)
+MOVQ    (r12,   112)
+MOVQ    (r13,   120)
+MOVQ    (r14,   128)
+MOVQ    (r15,   136)
 
 /* Use the return address for our RIP value */
 movq    0x8(%rbp), %rcx
@@ -93,9 +93,13 @@ pushfq
 popq    %rcx
 movq    %rcx, 152(%rsp)
 
-MOVQ    (cs, 160);
-MOVQ    (fs, 168);
-MOVQ    (gs, 176);
+/* https://github.com/plausiblelabs/plcrashreporter/pull/12/commits/4944d606e147be6e19ea322106dc96faf62b5dbc */
+movq    $0,  160(%rsp)
+movw    %cs, 160(%rsp)
+movq    $0,  168(%rsp)
+movw    %fs, 168(%rsp)
+movq    $0,  168(%rsp)
+movw    %gs, 176(%rsp)
 
 /* Move mctx to 3rd argument of plcrash_log_writer_write_curthread_stub */
 movq    %rsp, %rdx

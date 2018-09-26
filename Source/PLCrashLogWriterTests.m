@@ -44,10 +44,11 @@
 #import <mach-o/loader.h>
 #import <mach-o/dyld.h>
 
-#import "crash_report.pb-c.h"
 #import "PLCrashTestThread.h"
-
 #import "PLCrashSysctl.h"
+#ifndef DEBUFF
+#import "crash_report.pb-c.h"
+#endif
 
 @interface PLCrashLogWriterTests : SenTestCase {
 @private
@@ -63,6 +64,7 @@
 
 @end
 
+#pragma mark -
 
 @implementation PLCrashLogWriterTests
 

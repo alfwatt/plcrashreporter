@@ -49,10 +49,6 @@
 #import "PLCrashSysctl.h"
 #import "PLCrashProcessInfo.h"
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h> // For UIDevice
-#endif
-
 /**
  * @internal
  * Maximum number of frames that will be written to the crash report for a single thread. Used as a safety measure
@@ -442,15 +438,15 @@ plcrash_error_t plcrash_log_writer_init (plcrash_log_writer_t *writer,
         PLCF_DEBUG("Could not retrive kern.osversion: %s", strerror(errno));
     }
 
-#if TARGET_OS_IPHONE
-    /* iPhone OS */
-    writer->system_info.version = strdup(UIDevice.currentDevice.systemVersion.UTF8String);
-#elif TARGET_OS_MAC
-    /* Mac OS X */
-    writer->system_info.version = strdup(NSProcessInfo.processInfo.operatingSystemVersionString.UTF8String);
-#else
-#error Unsupported Platform
-#endif
+    /* https://github.com/plausiblelabs/plcrashreporter/pull/10/commits/d58b9f83da3b57d692643be5c07e3ffe84844d77 */
+    NSOperatingSystemVersion systemVersion = NSProcessInfo.processInfo.operatingSystemVersion;
+    NSString *systemVersionString = [NSString stringWithFormat:@"%ld.%ld", (long)systemVersion.majorVersion, (long)systemVersion.minorVersion];
+
+     if (systemVersion.patchVersion > 0) {
+         systemVersionString = [systemVersionString stringByAppendingFormat:@".%ld", (long)systemVersion.patchVersion];
+     }
+
+     writer->system_info.version = strdup(systemVersionString.UTF8String);
 
     /* Ensure that any signal handler has a consistent view of the above initialization. */
     OSMemoryBarrier();

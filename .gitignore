@@ -1,3 +1,4 @@
 CrashReporter.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 CrashReporter.xcodeproj/project.xcworkspace/xcuserdata/*
 CrashReporter.xcodeproj/xcuserdata/*
+Source/mach_exc*

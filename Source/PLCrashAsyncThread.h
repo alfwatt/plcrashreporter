@@ -90,10 +90,10 @@ typedef _STRUCT_MCONTEXT pl_mcontext_t;
     #define PLCRASH_ASYNC_THREAD_ARM_UNIFIED_SUPPORT 1
 #endif
     
-/* Note that we can remove the non-unified thread state support once we target iOS >= 7.0 */
+/* Note that we can remove the non-unified thread state support once we target iOS >= 7.0
 #if !defined(__arm64__) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_7_0
 #warning Support for non-unified thread state should be removed if targeting only iOS >= 7.0.
-#endif
+#endif*/
 
 #endif
 

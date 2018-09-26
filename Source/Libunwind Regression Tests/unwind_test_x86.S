@@ -17,7 +17,6 @@
  limitations under the License.
  */
 
-.intel_syntax noprefix
 #ifdef __i386__
 
 #

@@ -19,7 +19,6 @@
  */
 
 #ifdef __i386__
-.intel_syntax noprefix
 
 # TEST-OPTIONS:  unwind_test_main.c unwind_test_x86.s -arch i386 -fexceptions
 

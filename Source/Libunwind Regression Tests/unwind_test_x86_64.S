@@ -18,7 +18,6 @@
  */
 
 #ifdef __x86_64__
-.intel_syntax noprefix
 
 #
 # This is a generic function to test that restoring registers during unwinding work correctly.

@@ -58,8 +58,6 @@ pushq   %rbp
 movq    %rsp, %rbp
 subq    $720, %rsp // Size of 712 + 8 bytes for required alignment
 
-#define MOVQ(reg, offset) movq %##reg, offset(%rsp)
-
 // These assumed offsets are compile-time validated in PLCrashLogWriter_trampoline.m, and are ABI-stable.
 movq    %rax,   16(%rsp)
 movq    %rbx,   24(%rsp)
@@ -73,16 +71,16 @@ movq    (%rbp), %rcx
 movq    %rcx, 64(%rsp)
 
 /* ->rsp: Use our saved copy of the caller's stack pointer. */
-MOVQ    (rbp,   72)
+movq    %rbp,   72(%rsp)
 
-MOVQ    (r8,    80)
-MOVQ    (r9,    88)
-MOVQ    (r10,   96)
-MOVQ    (r11,   104)
-MOVQ    (r12,   112)
-MOVQ    (r13,   120)
-MOVQ    (r14,   128)
-MOVQ    (r15,   136)
+movq    %r8,    80(%rsp)
+movq    %r9,    88(%rsp)
+movq    %r10,   96(%rsp)
+movq    %r11,   104(%rsp)
+movq    %r12,   112(%rsp)
+movq    %r13,   120(%rsp)
+movq    %r14,   128(%rsp)
+movq    %r15,   136(%rsp)
 
 /* Use the return address for our RIP value */
 movq    0x8(%rbp), %rcx

@@ -19,7 +19,6 @@
  */
 
 #ifdef __x86_64__
-.intel_syntax noprefix
 
 # TEST-OPTIONS:  unwind_test_main.c unwind_test_x86_64.s -arch x86_64
 # TEST-OPTIONS:  unwind_test_main.c unwind_test_x86_64.s -arch x86_64 -DUSE_COMPACT_UNWIND=1

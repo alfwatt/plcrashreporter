@@ -1,7 +1,7 @@
 # https://github.com/plausiblelabs/plcrashreporter/blob/24eda2f69fff1fddc6bca8ba6b30e3b37ead579c/PLCrashReporter-DynamicFramework.podspec
 
 Pod::Spec.new do |s|
-  s.name             = 'PLCrashReporter-DynamicFramework'
+  s.name             = 'PLCrashReporter'
   s.version          = '1.3.0.1'
   s.summary          = 'Reliable, open-source crash reporting for iOS and Mac OS X.'
 
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/alfwatt/plcrashreporter'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Plausible Labs Cooperative, Inc.' => 'contact@plausible.coop' }
-  s.source           = { :git => 'https://github.com/alfwatt/plcrashreporter.git', :tag => "cocoa-pods-1.0" }
+  s.source           = { :git => 'https://github.com/alfwatt/plcrashreporter.git', :branch => 'debuff' }
 
-  s.ios.deployment_target = '7.0'
-  s.osx.deployment_target = '10.8'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.10'
 
   s.source_files = 'Source/**/*.{h,hpp,c,cc,cpp,m,mm,s}' # , 'Dependencies/protobuf-2.0.3/src/*'
   s.exclude_files = '**/*Tests.*', '**/*_test_*', '**/*TestCase.*', '**/*test.*', '**/*main.m'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Dependencies/**'
 
   s.pod_target_xcconfig = {
-    'GCC_PREPROCESSOR_DEFINITIONS' => 'PLCR_PRIVATE',
+    'GCC_PREPROCESSOR_DEFINITIONS' => 'PLCR_PRIVATE DEBUFF',
   }
   s.xcconfig = {
     'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',

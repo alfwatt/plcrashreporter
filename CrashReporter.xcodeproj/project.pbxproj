@@ -2133,13 +2133,13 @@
 			isa = PBXGroup;
 			children = (
 				75470FF62150DFD400D995EB /* README.md */,
-				75C2F3FB215B34BF00169C8F /* Packaging */,
 				08FB77AEFE84172EC02AAC07 /* Source */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				059670E30EEFADA6008A0601 /* Dependencies */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				75C2F3FB215B34BF00169C8F /* Packaging */,
 			);
 			indentWidth = 4;
 			name = CrashReporter;

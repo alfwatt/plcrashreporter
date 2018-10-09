@@ -376,24 +376,21 @@ static void uncaught_exception_handler (NSException *exception) {
 }
 
 
-/* (Deprecated) Crash reporter singleton. */
+/* Crash reporter singleton. */
 static PLCrashReporter *sharedReporter = nil;
 
 /**
  * Return the default crash reporter instance. The returned instance will be configured
  * appropriately for release deployment.
- *
- * @deprecated As of PLCrashReporter 1.2, the default reporter instance has been deprecated, and API
- * clients should initialize a crash reporter instance directly.
  */
 + (PLCrashReporter *) sharedReporter {
-    /* Once we drop 10.5 support, this may be converted to dispatch_once() */
-    static OSSpinLock onceLock = OS_SPINLOCK_INIT;
-    OSSpinLockLock(&onceLock); {
-        if (sharedReporter == nil)
-            sharedReporter = [[PLCrashReporter alloc] initWithBundle: [NSBundle mainBundle] configuration: [PLCrashReporterConfig defaultConfiguration]];
-    } OSSpinLockUnlock(&onceLock);
-
+    static dispatch_once_t onceLock;
+    dispatch_once(&onceLock, ^{
+        if (sharedReporter == nil) {
+            sharedReporter = [PLCrashReporter.alloc initWithBundle:NSBundle.mainBundle configuration:PLCrashReporterConfig.defaultConfiguration];
+        }
+    });
+    
     return sharedReporter;
 }
 
@@ -402,7 +399,7 @@ static PLCrashReporter *sharedReporter = nil;
  * for release deployment.
  */
 - (instancetype) init {
-    return [self initWithConfiguration: [PLCrashReporterConfig defaultConfiguration]];
+    return [self initWithConfiguration:PLCrashReporterConfig.defaultConfiguration];
 }
 
 /**

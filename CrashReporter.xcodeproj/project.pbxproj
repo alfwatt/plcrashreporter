@@ -108,7 +108,7 @@
 		052A45DA1363542800987004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F40CF10EF7AC0E008050CF /* main.m */; };
 		052A46271363553A00987004 /* libCrashReporter-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31520EE936A9000FDE88 /* libCrashReporter-iphoneos.a */; };
 		052A4649136355FD00987004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F40CF10EF7AC0E008050CF /* main.m */; };
-		052A46561363561B00987004 /* libCrashReporter-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31630EE93905000FDE88 /* libCrashReporter-iphoneos.a */; };
+		052A46561363561B00987004 /* libCrashReporter-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31630EE93905000FDE88 /* libCrashReporter-iphonesimulator.a */; };
 		053347AA17E161CB00C52E50 /* unwind_test_arm64.S in Sources */ = {isa = PBXBuildFile; fileRef = 053347A517E161CB00C52E50 /* unwind_test_arm64.S */; };
 		053347AB17E161CB00C52E50 /* unwind_test_arm64.S in Sources */ = {isa = PBXBuildFile; fileRef = 053347A517E161CB00C52E50 /* unwind_test_arm64.S */; };
 		053347AC17E161CB00C52E50 /* unwind_test_arm64.S in Sources */ = {isa = PBXBuildFile; fileRef = 053347A517E161CB00C52E50 /* unwind_test_arm64.S */; };
@@ -150,7 +150,7 @@
 		05507A541784DEE4009D5168 /* unwind_test_x86_frame.S in Sources */ = {isa = PBXBuildFile; fileRef = 05507A521784DEE4009D5168 /* unwind_test_x86_frame.S */; };
 		05507A551784DEE4009D5168 /* unwind_test_x86_frame.S in Sources */ = {isa = PBXBuildFile; fileRef = 05507A521784DEE4009D5168 /* unwind_test_x86_frame.S */; };
 		05614E291A966F5A00D62442 /* libCrashReporter-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31520EE936A9000FDE88 /* libCrashReporter-iphoneos.a */; };
-		05614E2A1A96722600D62442 /* libCrashReporter-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31630EE93905000FDE88 /* libCrashReporter-iphoneos.a */; };
+		05614E2A1A96722600D62442 /* libCrashReporter-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD31630EE93905000FDE88 /* libCrashReporter-iphonesimulator.a */; };
 		05659DEB17455DD400D2EE21 /* PLCrashAsyncDwarfEncoding.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05659DEA17455DD400D2EE21 /* PLCrashAsyncDwarfEncoding.hpp */; };
 		05659DEC17455DD400D2EE21 /* PLCrashAsyncDwarfEncoding.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 05659DEA17455DD400D2EE21 /* PLCrashAsyncDwarfEncoding.hpp */; };
 		05659DEE17455DED00D2EE21 /* PLCrashAsyncDwarfEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05659DED17455DED00D2EE21 /* PLCrashAsyncDwarfEncoding.cpp */; };
@@ -1300,7 +1300,7 @@
 		05C76DC7176FBAF300E9B10D /* PLCrashAsyncDwarfCFAState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PLCrashAsyncDwarfCFAState.hpp; sourceTree = "<group>"; };
 		05C76DD3176FBC1E00E9B10D /* PLCrashAsyncDwarfCFAStateTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PLCrashAsyncDwarfCFAStateTests.mm; sourceTree = "<group>"; };
 		05CD31520EE936A9000FDE88 /* libCrashReporter-iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCrashReporter-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		05CD31630EE93905000FDE88 /* libCrashReporter-iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCrashReporter-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CD31630EE93905000FDE88 /* libCrashReporter-iphonesimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCrashReporter-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CD31890EE93A90000FDE88 /* CrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReporter.h; sourceTree = "<group>"; };
 		05CD318A0EE93A90000FDE88 /* CrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashReporter.m; sourceTree = "<group>"; };
 		05CD32690EE93DC3000FDE88 /* Tests-MacOSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-MacOSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1437,7 +1437,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				052A46561363561B00987004 /* libCrashReporter-iphoneos.a in Frameworks */,
+				052A46561363561B00987004 /* libCrashReporter-iphonesimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1474,7 +1474,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05614E2A1A96722600D62442 /* libCrashReporter-iphoneos.a in Frameworks */,
+				05614E2A1A96722600D62442 /* libCrashReporter-iphonesimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1516,7 +1516,7 @@
 			children = (
 				8DC2EF5B0486A6940098B216 /* CrashReporter.framework */,
 				05CD31520EE936A9000FDE88 /* libCrashReporter-iphoneos.a */,
-				05CD31630EE93905000FDE88 /* libCrashReporter-iphoneos.a */,
+				05CD31630EE93905000FDE88 /* libCrashReporter-iphonesimulator.a */,
 				05CD32690EE93DC3000FDE88 /* Tests-MacOSX.xctest */,
 				05CD32A90EE94062000FDE88 /* Tests-iOS-Simulator.xctest */,
 				05CD33240EE94439000FDE88 /* Tests-iOS-Device.xctest */,
@@ -2611,7 +2611,7 @@
 			);
 			name = "CrashReporter-iOS-Simulator";
 			productName = "CrashReporter-iPhoneSimulator";
-			productReference = 05CD31630EE93905000FDE88 /* libCrashReporter-iphoneos.a */;
+			productReference = 05CD31630EE93905000FDE88 /* libCrashReporter-iphonesimulator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		05CD32680EE93DC3000FDE88 /* Tests-MacOSX */ = {
@@ -2875,7 +2875,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\nlipo \\\n\t\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/libCrashReporter-iPhoneOS.a\" \\\n\t\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/libCrashReporter-iPhoneSimulator.a\" \\\n\t-create -output \"${FRAMEWORK}/Versions/Current/${PRODUCT_NAME}\"\n\n# Strip debugging symbols\n#strip -S \"${FRAMEWORK}/Versions/Current/${PRODUCT_NAME}\"\n\ncd \"${FRAMEWORK}\" && ln -sf \"Versions/Current/${PRODUCT_NAME}\" ./";
+			shellScript = "FRAMEWORK=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\nmkdir -p \"${FRAMEWORK}/Versions/Current/\"\n\nlipo \\\n    \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/libCrashReporter-iPhoneOS.a\" \\\n    \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/libCrashReporter-iPhoneSimulator.a\" \\\n    -create -output \"${FRAMEWORK}/Versions/Current/${PRODUCT_NAME}\"\n\n# Strip debugging symbols\n#strip -S \"${FRAMEWORK}/Versions/Current/${PRODUCT_NAME}\"\n\ncd \"${FRAMEWORK}\" && ln -sf \"Versions/Current/${PRODUCT_NAME}\" ./\n";
 		};
 		058812D310405908009128FB /* Create Disk Image */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3861,12 +3861,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					arrmv7,
-				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3894,14 +3891,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-					arm64,
-					x86_64,
-				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -3953,6 +3945,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = NO;
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3973,6 +3966,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
@@ -3992,7 +3986,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphonesimulator";
 				COPY_PHASE_STRIP = NO;
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4001,8 +3997,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "CrashReporter${EFFECTIVE_PLATFORM_NAME}";
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = "CrashReporter-iphonesimulator";
+				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -4011,15 +4007,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphonesimulator";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "CrashReporter${EFFECTIVE_PLATFORM_NAME}";
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = "CrashReporter-iphonesimulator";
+				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
@@ -4276,6 +4274,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				EFFECTIVE_PLATFORM_NAME = "-MacOSX";
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
@@ -4305,6 +4304,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EFFECTIVE_PLATFORM_NAME = "-MacOSX";
@@ -4390,6 +4390,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4421,6 +4422,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4503,7 +4505,7 @@
 				PL_MIN_MACOSX_SDK = 1080;
 				PL_NEVER_WARN = "-Wno-objc-interface-ivars -Wno-c++98-compat-pedantic -Wno-padded -Wno-gnu-zero-variadic-macro-arguments -Wno-variadic-macros";
 				SDKROOT = macosx;
-				VALID_ARCHS = "ppc armv6 armv7 armv7s arm64 x86_64";
+				VALID_ARCHS = "armv6 armv7 armv7s arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wno-shorten-64-to-32",
@@ -4574,7 +4576,7 @@
 				PL_MIN_MACOSX_SDK = 1080;
 				PL_NEVER_WARN = "-Wno-objc-interface-ivars -Wno-c++98-compat-pedantic -Wno-padded -Wno-gnu-zero-variadic-macro-arguments -Wno-variadic-macros";
 				SDKROOT = macosx;
-				VALID_ARCHS = "ppc armv6 armv7 armv7s arm64 x86_64";
+				VALID_ARCHS = "armv6 armv7 armv7s arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wno-shorten-64-to-32",

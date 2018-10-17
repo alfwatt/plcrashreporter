@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "05CD31620EE93905000FDE88"
-               BuildableName = "libCrashReporter-iphoneos.a"
+               BuildableName = "libCrashReporter-iphonesimulator.a"
                BlueprintName = "CrashReporter-iOS-Simulator"
                ReferencedContainer = "container:CrashReporter.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphoneos.a"
+            BuildableName = "libCrashReporter-iphonesimulator.a"
             BlueprintName = "CrashReporter-iOS-Simulator"
             ReferencedContainer = "container:CrashReporter.xcodeproj">
          </BuildableReference>
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphoneos.a"
+            BuildableName = "libCrashReporter-iphonesimulator.a"
             BlueprintName = "CrashReporter-iOS-Simulator"
             ReferencedContainer = "container:CrashReporter.xcodeproj">
          </BuildableReference>
@@ -73,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "05CD31620EE93905000FDE88"
-            BuildableName = "libCrashReporter-iphoneos.a"
+            BuildableName = "libCrashReporter-iphonesimulator.a"
             BlueprintName = "CrashReporter-iOS-Simulator"
             ReferencedContainer = "container:CrashReporter.xcodeproj">
          </BuildableReference>

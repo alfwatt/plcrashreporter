@@ -971,7 +971,7 @@
 				"${DERIVED_FILES_DIR}/${CURRENT_ARCH}/$(INPUT_FILE_BASE).pb-c.c",
 				"${DERIVED_FILES_DIR}/${CURRENT_ARCH}/$(INPUT_FILE_BASE).pb-c.h",
 			);
-			script = "cd \"${INPUT_FILE_DIR}\" && \"${SRCROOT}/Dependencies/protobuf-2.0.3/bin/protoc-c\" --c_out=\"${DERIVED_FILES_DIR}/${CURRENT_ARCH}\" \"${INPUT_FILE_NAME}\"";
+			script = "cd \"${INPUT_FILE_DIR}\" && \"${SRCROOT}/Dependencies/protobuf-2.0.3/bin/protoc-c\" --c_out=\"${DERIVED_FILES_DIR}/${CURRENT_ARCH}\" \"${INPUT_FILE_NAME}\"\n";
 		};
 		05F411FF0EF8E070008050CF /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
@@ -2744,6 +2744,15 @@
 				BuildIndependentTargetsInParallel = NO;
 				LastUpgradeCheck = 1000;
 				TargetAttributes = {
+					058812B81040582D009128FB = {
+						ProvisioningStyle = Manual;
+					};
+					05CD31510EE936A9000FDE88 = {
+						ProvisioningStyle = Manual;
+					};
+					05CD31620EE93905000FDE88 = {
+						ProvisioningStyle = Manual;
+					};
 					05CD33230EE94439000FDE88 = {
 						TestTargetID = 052A45CE136353FB00987004;
 					};
@@ -3862,12 +3871,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EFFECTIVE_PLATFORM_NAME = "-iphone";
+				EFFECTIVE_PLATFORM_NAME = "-iphoneos";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -3892,12 +3902,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EFFECTIVE_PLATFORM_NAME = "-iphone";
+				EFFECTIVE_PLATFORM_NAME = "-iphoneos";
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -3945,6 +3956,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = NO;
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
@@ -3966,6 +3979,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphoneos";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3988,6 +4003,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = x86_64;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphonesimulator";
 				COPY_PHASE_STRIP = NO;
 				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
@@ -4009,6 +4026,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = x86_64;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-iphonesimulator";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -4389,6 +4408,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
@@ -4421,6 +4441,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

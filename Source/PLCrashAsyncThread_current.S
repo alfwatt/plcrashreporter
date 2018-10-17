@@ -110,7 +110,7 @@ popq    %rbp
 ret
 
 #elif __i386__
-
+#ifdef __DISABLED__
 pushl   %ebp
 movl    %esp, %ebp
 subl    $616, %esp // Size of 600 for context + 4 bytes for required alignment + 12 bytes for call arguments
@@ -172,7 +172,7 @@ call    SYM(plcrash_async_thread_state_current_stub)
 addl    $616, %esp
 popl    %ebp
 ret
-
+#endif
 #elif defined(__arm64__)
 
 stp     fp, lr, [sp, #-16]!
